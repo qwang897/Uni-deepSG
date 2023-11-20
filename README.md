@@ -5,8 +5,11 @@ Uni-deepSG is a sgRNA eff prediction tools.
 using $eff=\frac{1}{1+A \cdot e^{(ener+B)}}$ to combine CAS9 variants together. so the model can train different CAS9 or in different labs 
 
 requrments:
+
 python==3.8.0
+
 numpy==1.23.5
+
 pytorch==2.0.1+cu117
 
 source data path:./main/source_data
