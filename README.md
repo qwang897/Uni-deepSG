@@ -6,18 +6,18 @@ using $eff=\frac{1}{1+A \cdot e^{(ener+B)}}$ to combine CAS9 variants together. 
 
 **requrments:**
 
-python==3.8.0
+python==3.8.0  
+numpy==1.23.5  
+pytorch==2.0.1+cu117    
 
-numpy==1.23.5
+**source data path**: ./main/source_data  
 
-pytorch==2.0.1+cu117
-
-source data path: ./main/source_data
-
+**model training**  
 if you want to train the model, in ./main/TrainModel/ run temtrain.py. if you want to add new items, please check the format in ./main/TrainModel/data/
+ 
 
-to make sgrna format correctly, choosing "normal" for normal scarfford, "abnormal" for scarfford using in Kim et al 2020. 
-
+**predict tools**  
+to make sgrna format correctly, choosing "normal" for normal scarfford, "abnormal" for scarfford using in Kim et al 2020.
 if you want to predict one sgrna eff, in ./main/PredictionTools run predict.ipynb . change the sgrna variable in cell2. 23bp is need.
 
 if you want to predict batches of sgrna in ./main/BatchPrediction/ run predict.ipynb. input file example is at ./main/BatchPredition/data/esp_format_23bp_eff.npy
