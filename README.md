@@ -21,7 +21,7 @@ the model is showing as follow:
 
 **predict tools**  
 to make sgrna format correctly, choosing "normal" for normal scarfford, "abnormal" for scarfford using in Kim et al 2020.
-if you want to predict one sgrna eff, in ./main/PredictionTools run predict.ipynb . change the sgrna variable in cell2. 23bp is need.
+if you want to predict one sgrna eff, in ./main/PredictionTools run predict.ipynb. change the sgrna variable in "cell 2" 23bp is need.
 
 if you want to predict batches of sgrna in ./main/BatchPrediction/ run predict.ipynb. input file example is at ./main/BatchPredition/data/esp_format_23bp_eff.npy
 In this model, if you want to predict multiple sequences and want to minimize the mean squared error (MSE), you can adjust the parameters A and B with input a small number of template sequence(10 for example) within your cas9 variants or laboratory. This adjustment can help improve the prediction results. It's important to note that this process will not affect the Spearman correlation.
