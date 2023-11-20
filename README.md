@@ -1,5 +1,5 @@
 # Uni-deepSG
-
+![uni-deepSG](./model.tif)
 Uni-deepSG is a sgRNA eff prediction tools.
 
 using $eff=\frac{1}{1+A \cdot e^{(ener+B)}}$ to combine CAS9 variants together. so the model can train different CAS9 or in different labs 
