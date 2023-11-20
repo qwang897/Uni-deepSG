@@ -13,7 +13,10 @@ pytorch==2.0.1+cu117
 **source data path**: ./main/source_data  
 
 **model training**  
-if you want to train the model, in ./main/TrainModel/ run temtrain.py. if you want to add new items, please check the format in ./main/TrainModel/data/
+if you want to train the model, in ./main/TrainModel/ run temtrain.py.  
+if you want to add new items, please check the format in ./main/TrainModel/data/ remeber to add the scarfford. the scarfford format is in "./main/TrainModel/AddScarfford.ipynb"
+the model is showing as follow:  
+![MODEL](./model.png)
  
 
 **predict tools**  
