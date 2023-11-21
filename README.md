@@ -1,4 +1,6 @@
 # Uni-deepSG
+
+**If you use any code in this repository, please kindly cite our paper: "Z. C. Zhong, Z. Y. Li, J. Yang and Qian Wang, Unified Model to Predict gRNA Efficiency across Diverse Cell Lines and CRISPR-Cas9 Systems, Journal of Chemical Information and Modeling". Thank you.**
 ![uni-deepSG](./topic.png)
 **Uni-deepSG is a sgRNA eff prediction tools.**
 
