@@ -1,20 +1,22 @@
 # Uni-deepSG
-
-![uni-deepSG](./topic.png)<br>
-**Uni-deepSG is a sgRNA eff prediction tools.**  
 If you use any code in this repository, please kindly cite our paper: "Z. C. Zhong, Z. Y. Li, J. Yang and Qian Wang, Unified Model to Predict gRNA Efficiency across Diverse Cell Lines and CRISPR-Cas9 Systems, Journal of Chemical Information and Modeling". Thank you.
 
-using $eff=\frac{1}{1+\cdot e^{(A ener+B)}}$ to combine CAS9 variants together. so the model can train different CAS9 or in different labs 
+![uni-deepSG](./topic.png)<br>
+**Model Introduction**  
+Uni-deepSG is a sgRNA efficiency prediction tool. In our paper, we proved that:
+1) SgRNA efficiency, eff, can be modeled as  $eff=\frac{1}{1+\cdot e^{(a*E+b)}}$. E is solely determined by sgRNA sequence. a and b are two constants representing the uniqueness of each dataset
+2) For identical sgRNA sequence, the editing efficiency measured in two different experiments can be expressed as $eff2=\frac{1}{1+A*((1/$eff1 -1))^B}}$
+Based on these two conclusions, we can integrate data from different sources (labs, cell lines, Cas9 variants...) together to train a unified model.
 
-**Requirments:**
-
+**Requirments**
 python==3.8.0  
 numpy==1.23.5  
 pytorch==2.0.1+cu117    
 
-**Source data path**: ./main/source_data  
+**Source Data**
+All training and testing data can be found in ./main/source_data  
 
-**model training**  
+**Model Training**  
 If you want to train the model, in ./main/TrainModel/ run temtrain.py.  
 If you want to add new items, please check the format in ./main/TrainModel/data/ remeber to add the scaffold. the scaffold format is in "./main/TrainModel/AddScarfford.ipynb"<br>
 the model is showing as follow:  
