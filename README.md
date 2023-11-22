@@ -26,5 +26,5 @@ The architechture of the model is:
 **Model Prediction**  
 1. Choosing "type 1" for the most common scaffold, "type 2" for scaffold used in Kim et al 2020  ().
 2. If you want to predict the efficiency of a single sgRNA, go to the directory "./main/PredictionTools", run predict.ipynb. You need to input the sgRNA sequence (20+3PAM=23bp) in cell2 "sgrna=XXX".
-3. If you want to predict batches of sgrna in ./main/BatchPrediction/ run predict.ipynb. input file example is at ./main/BatchPredition/data/esp_format_23bp_eff.npy
-In this model, if you want to predict multiple sequences and want to minimize the mean squared error (MSE), you can adjust the parameters A and B with input a small number of template sequence(10 for example) within your cas9 variants or laboratory. This adjustment can help improve the prediction results. It's important to note that this process will not affect the Spearman correlation.
+3. If you want to predict the efficiencies of multiple sgRNA, go to the directory "./main/BatchPrediction/", run predict.ipynb. An input  example is: ./main/BatchPredition/data/esp_format_23bp_eff.npy
+In this model, if you want to  minimize the mean squared error (MSE), you can adjust the parameters A and B, fitted by a small number of template sequences (10 for example). This adjustment can help improve the Pearson correlation. It's important to note that this process will not affect the Spearman correlation.
