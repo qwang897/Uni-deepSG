@@ -16,7 +16,7 @@ for i in basedir:
 print(transdir)
 
 class data_loader(Dataset):
-    def __init__(self,dic="./data",file=False,filetype=0,state="normal") -> None:
+    def __init__(self,dic="./data",file=False,filetype=0,state="type1") -> None:
         super().__init__()
         if not file:
             item=os.listdir(dic)
@@ -36,14 +36,14 @@ class data_loader(Dataset):
                     float(eff)
                 except:
                     continue
-                if state == "normal":
+                if state == "type1":
+                    sgrna=psgrna+"gtttTagagctagaaatagcaagttAaaataaggctagtccgttatcaacttgaaaaagtggcaccgagtcggtgcttt"[:36].upper()
+                elif state == "type2":
                     sgrna=psgrna+"gtttCagagctaTGCTGgaaaCAGCAtagcaagttGaaataaggctagtccgttatcaacttgaaaaagtggcaccgagtcggtgcttt"[:36].upper()
-                elif state == "abnormal":
-                    sgrna=psgrna+"gtttTagagctaNNNNNgaaaNNNNNtagcaagttAaaataaggctagtccgttatcaacttgaaaaagtggcaccgagtcggtgcttt"[:36].upper()
                 elif state == "prepared":
                     sgrna = psgrna
                 else:
-                    print("part of the scar should in the input sequence. choose the state 'normal' for commen scar. 'abnormal' for scar in kim2020. prepared if you have used the sca.ipynb to add the scar. ")
+                    print("part of the scar should in the input sequence. choose the state 'type1' for commen scar. 'type2' for scar in kim2020. prepared if you have used the sca.ipynb to add the scar. ")
                 if len(sgrna) == 59 and float(eff) <=1000:
                     for j in range(59):
                         bb=sgrna[j:j+1].upper()
@@ -78,4 +78,4 @@ def translateseq(sgrna):
         for j in range(59):
             bb=sgrna[j:j+1].upper()
             line.append(transdir[bb])
-    return torch.LongTensor(line)
+    return torch.LongTensor([line])
