@@ -6,17 +6,17 @@ If you use any code in this repository, please kindly cite our paper: "Z. C. Zho
 
 using $eff=\frac{1}{1+\cdot e^{(A ener+B)}}$ to combine CAS9 variants together. so the model can train different CAS9 or in different labs 
 
-**requrments:**
+**Requirments:**
 
 python==3.8.0  
 numpy==1.23.5  
 pytorch==2.0.1+cu117    
 
-**source data path**: ./main/source_data  
+**Source data path**: ./main/source_data  
 
 **model training**  
-if you want to train the model, in ./main/TrainModel/ run temtrain.py.  
-if you want to add new items, please check the format in ./main/TrainModel/data/ remeber to add the scarfford. the scarfford format is in "./main/TrainModel/AddScarfford.ipynb"<br>
+If you want to train the model, in ./main/TrainModel/ run temtrain.py.  
+If you want to add new items, please check the format in ./main/TrainModel/data/ remeber to add the scaffold. the scaffold format is in "./main/TrainModel/AddScarfford.ipynb"<br>
 the model is showing as follow:  
 ![MODEL](./model.png)
  
