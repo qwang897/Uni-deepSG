@@ -36,9 +36,9 @@ class data_loader(Dataset):
                     float(eff)
                 except:
                     continue
-                if state == "type1":
-                    sgrna=psgrna+"gtttTagagctagaaatagcaagttAaaataaggctagtccgttatcaacttgaaaaagtggcaccgagtcggtgcttt"[:36].upper()
-                elif state == "type2":
+                if state == "type2":
+                    sgrna=psgrna+"gtttTagagctaNNNNNgaaaNNNNNtagcaagttAaaataaggctagtccgttatcaacttgaaaaagtggcaccgagtcggtgcttt"[:36].upper()
+                elif state == "type1":
                     sgrna=psgrna+"gtttCagagctaTGCTGgaaaCAGCAtagcaagttGaaataaggctagtccgttatcaacttgaaaaagtggcaccgagtcggtgcttt"[:36].upper()
                 elif state == "prepared":
                     sgrna = psgrna
